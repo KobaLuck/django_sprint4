@@ -5,13 +5,12 @@ from .views import (
     IndexListView, UserProfileView, EditUserProfileView,
     PostDetailView, PostCreateView, CategoryListView,
     EditCommentView, DeleteCommentView
-    )
+)
 
 
 app_name = 'blog'
 
 
-# blogicum\blog\urls.py
 urlpatterns = [
     path(
         'posts/<int:post_id>/',
