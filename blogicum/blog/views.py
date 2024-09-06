@@ -11,13 +11,7 @@ from django.utils import timezone
 from .models import Post, Category, Comment
 from .forms import PostForm, CommentForm
 from blogicum.settings import LIMIT_POSTS
-
-
-class OnlyAuthorMixin(UserPassesTestMixin):
-
-    def test_func(self):
-        object = self.get_object()
-        return object.author == self.request.user
+from .mixins import OnlyAuthorMixin
 
 
 class IndexListView(ListView):
